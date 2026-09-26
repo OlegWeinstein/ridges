@@ -2,26 +2,23 @@
 
 Research code for Czochralski crystal growth, ridge formation, and recursive TPL submeshes.
 
-## Snapshot status
+## Status
 
-**This is a partial source handoff, not a standalone buildable release.**
+**Partial source snapshot. Not a standalone buildable release.**
 
-Imported unchanged from `FEexp3dSubR1_Pro_handoff.zip` (14 files). The original archive is preserved under `archive/`.
+This repository contains the five C++ source/header/build files available in the latest located handoff, copied byte-for-byte. The handoff itself also lacks required dependencies and physical inputs.
 
-Archive SHA256: `aaca63aa6a80bbfec9acd8eff2d7e0374d4196490b3c8593fd9b45e6f5bec7a0`.
-
-The build was attempted on 26 September 2026 using GCC 13.3.0 on Linux. `sh build.sh` exited with status 1: missing `src/facet.h`. Additional sources and inputs are absent. No numerical simulation ran, and no physical validation is claimed.
-
-See [the build report](reports/Ridge_build_check_2026-09-26.md) and [compiler log](reports/build.log) for evidence and the directly identified missing files.
+The original build was attempted on 26 September 2026 with GCC 13.3.0 on Linux. `sh build.sh` exited 1 at missing `src/facet.h`. No numerical simulation ran; no physical validation is claimed. See [build report](reports/Ridge_build_check_2026-09-26.md) and [compiler log](reports/build.log).
 
 ## Contents
 
-- `3dFEexp.cpp`, `src/mesh/`: supplied C++ sources.
-- `AGENTS.md`, project/context documents, and `todo`: original handoff documentation; some documents describe different historical states.
-- `build.sh`: original build commands, requiring missing dependencies.
-- `archive/FEexp3dSubR1_Pro_handoff.zip`: byte-for-byte original archive.
-- `reports/`: actual build outcome and integrity manifest.
+- `3dFEexp.cpp` and `src/mesh/`: unchanged supplied C++ source/header files.
+- `build.sh`: original build script; still needs the missing dependencies.
+- `archive/Ridge_partial_sources_2026-09-26.zip`: ZIP of those five files only; NOT the original handoff archive.
+- `reports/SHA256SUMS`: checksums for the published source/build files, ZIP, report and log.
+
+Original project/agent documents and the original ZIP are withheld after automatic approval review rejected publication of detailed agent instructions and a local filesystem path in `todo`. This does not affect the source/build file contents.
 
 ## Next step
 
-Add the complete matching FEexp3dSubR1 source/input tree, including `param.txt`, the axisymmetric initializer for the documented case, and the missing 2D driver. Then rebuild and run the documented bounded cases in separate working directories. Do not substitute unrelated historical dependencies or fabricate physical inputs.
+Supply the complete matching FEexp3dSubR1 source/input tree, including `param.txt`, the required headers/implementations, the axisymmetric initializer for the documented case, and the missing 2D driver. Then rebuild and run the bounded cases in separate case directories. Do not substitute unrelated historical dependencies or fabricate physical inputs.
